@@ -1,0 +1,97 @@
+<!-- patient-dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .appointment,
+        .prescription {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Patient Dashboard</h2>
+
+    <div id="appointments">
+        <h3>Appointments</h3>
+        <!-- Appointments will be dynamically added here -->
+    </div>
+
+    <div id="prescriptions">
+        <h3>Prescriptions</h3>
+        <!-- Prescriptions will be dynamically added here -->
+    </div>
+
+    <script>
+        // Dummy data (replace with actual API calls)
+        const appointmentsData = [
+            { id: 1, time: '2023-12-10 10:00 AM', doctorId: 101, doctorName: 'Dr. Smith', status: 'Confirmed' },
+            { id: 2, time: '2023-12-15 02:30 PM', doctorId: 102, doctorName: 'Dr. Johnson', status: 'Pending' },
+        ];
+
+        const prescriptionsData = [
+            { id: 1, medication: 'Medicine A', dosage: '1 tablet daily' },
+            { id: 2, medication: 'Medicine B', dosage: '2 tablets after meals' },
+        ];
+
+        // Function to render appointments
+        function renderAppointments() {
+            const appointmentsContainer = document.getElementById('appointments');
+
+            appointmentsData.forEach(appointment => {
+                const appointmentDiv = document.createElement('div');
+                appointmentDiv.classList.add('appointment');
+
+                appointmentDiv.innerHTML = `
+                    <p><strong>Time:</strong> ${appointment.time}</p>
+                    <p><strong>Doctor:</strong> ${appointment.doctorName} (ID: ${appointment.doctorId})</p>
+                    <p><strong>Status:</strong> ${appointment.status}</p>
+                `;
+
+                appointmentsContainer.appendChild(appointmentDiv);
+            });
+        }
+
+        // Function to render prescriptions
+        function renderPrescriptions() {
+            const prescriptionsContainer = document.getElementById('prescriptions');
+
+            prescriptionsData.forEach(prescription => {
+                const prescriptionDiv = document.createElement('div');
+                prescriptionDiv.classList.add('prescription');
+
+                prescriptionDiv.innerHTML = `
+                    <p><strong>Medication:</strong> ${prescription.medication}</p>
+                    <p><strong>Dosage:</strong> ${prescription.dosage}</p>
+                `;
+
+                prescriptionsContainer.appendChild(prescriptionDiv);
+            });
+        }
+
+        // Render data on page load
+        renderAppointments();
+        renderPrescriptions();
+    </script>
+
+</body>
+</html>
