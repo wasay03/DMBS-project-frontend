@@ -1,0 +1,50 @@
+/* admin_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.patient,
+.doctor {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.deleteBtn {
+    cursor: pointer;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+
+.deleteBtn:hover {
+    background-color: #c82333;
+}
+
+.addbtn{
+        
+        padding: 10px;
+        border: none;
+        border-radius: 15px; /* Updated to round the edges */
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        
+    
+}

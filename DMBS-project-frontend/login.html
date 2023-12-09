@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    
+</head>
+<body>
+    
+    <div class="loginForm">
+        <img src="download.png" alt="Logo" style="width: 80px; height: 80px; margin-right: 10px; margin-bottom: 10px;">
+
+        <h2>Login</h2>
+
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="role">Role:</label>
+            <select id="role" name="role">
+                <option value="admin">Patient</option>
+                <option value="doctor">Doctor</option>
+                <option value="patient">Admin</option>
+            </select>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+
+        <p class="signup">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+    <script src="login.js"></script>
+    </div>  
+</body>
+</html>

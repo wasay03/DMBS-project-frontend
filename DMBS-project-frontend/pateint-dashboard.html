@@ -1,0 +1,41 @@
+<!-- patient-dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="pd_styles.css"> <!-- Updated CSS file name -->
+</head>
+<body>
+
+    <h2>Patient Dashboard</h2>
+
+    <div id="appointments">
+        <h3>Appointments</h3>
+        <div id="recentAppointments">
+            <!-- Most recent appointment will be dynamically added here -->
+        </div>
+        <div id="allAppointments" style="display: none;">
+            <!-- All appointments will be dynamically added here -->
+        </div>
+        <button onclick="toggleAppointmentsView()">View All Appointments</button>
+        <button onclick="bookAppointment()">Book Appointment</button>
+    </div>
+
+    <div id="prescriptions">
+        <h3>Prescriptions</h3>
+        <div id="recentPrescriptions">
+            <!-- Most recent prescription will be dynamically added here -->
+        </div>
+        <div id="allPrescriptions" style="display: none;">
+            <!-- All prescriptions will be dynamically added here -->
+        </div>
+        <button onclick="togglePrescriptionsView()">View All Prescriptions</button>
+    </div>
+
+    <script src="pd.js"></script> <!-- Updated JS file name -->
+
+</body>
+</html>

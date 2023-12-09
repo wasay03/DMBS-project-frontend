@@ -1,0 +1,39 @@
+<!-- doctor-dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor_styles.css">
+</head>
+<body>
+
+    <div id="doctorInfo">
+        <h3>Doctor Information</h3>
+        <p><strong>ID:</strong> <span id="doctorId"></span></p>
+        <p><strong>Name:</strong> <span id="doctorName"></span></p>
+        <p><strong>Specialization:</strong> <span id="specialization"></span></p>
+    </div>
+
+    <div id="patients">
+        <h3>Patients</h3>
+        <ul id="patientList">
+            <!-- Patients will be dynamically added here -->
+        </ul>
+        <button id="viewAllpatients" onclick="togglePatientsView()">View All Patients</button>
+    </div>
+    <div id="appointment">
+        <h3>Appointments</h3>
+        <ul id="appointmentList">
+            <!-- appointments will be dynamically added here -->
+        </ul>
+    </div>
+
+    
+    <script src="doctor_dashboard.js"></script>
+
+</body>
+</html>
+
